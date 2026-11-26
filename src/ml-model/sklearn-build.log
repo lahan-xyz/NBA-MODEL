@@ -1,0 +1,19 @@
+nohup: ignoring input
+Collecting scikit-learn
+  Downloading scikit_learn-1.9.1.tar.gz (7.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.8/7.8 MB 265.4 kB/s  0:00:30
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+  error: backend-unavailable
+  
+  × Cannot import build backend 'mesonpy'.
+  ╰─> ModuleNotFoundError: No module named 'mesonpy'
+  
+  note: This is likely not a problem with pip.
+error: metadata-generation-failed
+
+× Encountered error while generating package metadata.
+╰─> scikit-learn
+
+note: This is an issue with the package mentioned above, not pip.
+hint: See above for details.

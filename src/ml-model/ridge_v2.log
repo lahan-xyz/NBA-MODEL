@@ -1,0 +1,8 @@
+
+[raw_margin only]
+  MAE margin 11.572   MAE total 15.454
+  Brier     0.2021
+
+[all 33 features]
+  MAE margin 11.612   MAE total 14.607
+  Brier     0.2039

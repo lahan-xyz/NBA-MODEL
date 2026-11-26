@@ -1,0 +1,40 @@
+Train: 2189  Test: 1171  Features: 29
+
+Fitting margin head...
+  iter  50  train_mse=170.784  val_mse=210.403
+  iter 100  train_mse=150.281  val_mse=209.932
+  early stop at iter 103 (best 63)
+Fitting total head...
+  iter  50  train_mse=255.219  val_mse=298.446
+  early stop at iter 75 (best 35)
+
+==============================================================
+Metric                         Baseline   NumPy GBDT          Δ
+--------------------------------------------------------------
+MAE margin                      11.5717      11.9336    +0.3619
+MAE total                       14.7473      14.8728    +0.1255
+Brier (win prob)                 0.2021       0.2095    +0.0074
+Winner accuracy                  0.6832       0.6755    -0.0077
+==============================================================
+
+GBDT calibration (margin head):
+  <30%: n= 108  pred=0.230  actual=0.194
+  30-40%: n= 138  pred=0.349  actual=0.304
+  40-50%: n= 225  pred=0.453  actual=0.444
+  50-60%: n= 215  pred=0.551  actual=0.605
+  60-70%: n= 142  pred=0.651  actual=0.577
+  >70%: n= 343  pred=0.807  actual=0.790
+
+Top features (margin, split-count importance):
+  raw_margin       0.1169
+  a_o_roll5        0.0655
+  h_o              0.0635
+  a_d_roll5        0.0595
+  pace_avg         0.0544
+  league           0.0494
+  a_o_roll10       0.0464
+  h_o_roll5        0.0433
+  a_p_roll5        0.0413
+  h_d              0.0403
+
+Wrote ml-model/test_predictions.csv
